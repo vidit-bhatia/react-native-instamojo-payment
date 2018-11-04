@@ -1,6 +1,6 @@
 {
   "name": "react-native-instamojo-payment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -22,6 +22,8 @@
   },
   "jest": {
     "preset": "react-native",
-    "transform": { "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js" }
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
   }
 }
