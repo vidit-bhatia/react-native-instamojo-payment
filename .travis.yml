@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "node"
+deploy:
+  provider: npm
+  email: "viditbhatia@hotmail.com"
+  api_key: $travis_token
