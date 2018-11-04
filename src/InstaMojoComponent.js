@@ -14,7 +14,7 @@ export default class InstamojoPaymentComponent extends React.Component {
         payment_final_id: payment_final_id
       };
       if(this.props.callback_on_completion){
-        this.props.callback_on_completion(return_data) 
+        this.props.callback_on_completion(return_data)
       }
     }
   }
