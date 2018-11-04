@@ -7,16 +7,17 @@ install:
 script:
 - npm test
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: scripts/travis.sh
-  on:
-    branch: master
-    tags: false
-
 jobs:
   include:
+    - stage: tag
+      node_js: "node"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: scripts/travis.sh
+        on:
+          branch: master
+          tags: false
     - stage: npm release
       node_js: "7"
       script: echo "Deploying to npm ..."
