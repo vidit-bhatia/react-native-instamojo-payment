@@ -27,12 +27,10 @@ make_version() {
 
   # Run the deploy build and increment the package versions
   # %s is the placeholder for the created tag
-  npm version patch -m "chore: release version %s [skip ci]"
+  npm version patch -m "chore: release version %s"
 }
 
 upload_files() {
-  # This make sure the current work area is pushed to the tip of the current branch
-  git push origin HEAD:$TRAVIS_BRANCH
 
   # This pushes the new tag
   git push --tags
