@@ -10,6 +10,7 @@ script:
 jobs:
   include:
     - stage: tag
+      if: commit_message !~ /(no-deploy|wip)/
       node_js: "node"
       deploy:
         provider: script
