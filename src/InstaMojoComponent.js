@@ -2,12 +2,6 @@ import React from 'react';
 import { Text, WebView } from 'react-native';
 import PropTypes from 'prop-types';
 
-InstamojoPaymentComponent.propTypes = {
-  redirect_url: PropTypes.string.isRequired,
-  instamojo_long_url: PropTypes.string.isRequired,
-  callback_on_completion:PropTypes.func
-};
-
 export default class InstamojoPaymentComponent extends React.Component {
 
   onNavigationChange(webViewState) {
@@ -41,3 +35,8 @@ export default class InstamojoPaymentComponent extends React.Component {
   );
   }
 }
+InstamojoPaymentComponent.propTypes = {
+  redirect_url: PropTypes.string.isRequired,
+  instamojo_long_url: PropTypes.string.isRequired,
+  callback_on_completion:PropTypes.func
+};
