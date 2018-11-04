@@ -1,6 +1,20 @@
 language: node_js
 node_js:
   - "node"
+install:
+- npm install
+
+script:
+- npm test
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: .travis/pu.sh
+  on:
+    branch: master
+    tags: false
+
 jobs:
   include:
     - stage: npm release
@@ -10,4 +24,5 @@ jobs:
         provider: npm
         api_key: $travis_token
         email: "viditbhatia@hotmail.com"
-        on: deploy-npm-release
+        on:
+          tags: true
