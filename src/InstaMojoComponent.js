@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, WebView } from 'react-native';
+import { Text } from 'react-native';
+import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 
 export default class InstamojoPaymentComponent extends React.Component {
