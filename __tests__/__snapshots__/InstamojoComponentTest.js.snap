@@ -8,10 +8,11 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-  <RCTWebView
+  <RNCWKWebView
     messagingEnabled={false}
     onLoadingError={[Function]}
     onLoadingFinish={[Function]}
+    onLoadingProgress={[Function]}
     onLoadingStart={[Function]}
     onMessage={[Function]}
     onShouldStartLoadWithRequest={[Function]}
